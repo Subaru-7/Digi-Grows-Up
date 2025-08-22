@@ -1,6 +1,9 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ServicesContent } from "@/components/services-content"
+import { Suspense } from "react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -33,7 +36,9 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <ServicesContent />
+        <Suspense fallback={<div className="text-center py-24">Loading services...</div>}>
+          <ServicesContent />
+        </Suspense>
       </main>
       <Footer />
     </div>
