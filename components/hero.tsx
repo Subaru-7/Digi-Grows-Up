@@ -10,7 +10,13 @@ export function Hero() {
   return (
     <section className="section-spacing relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.05),transparent_50%)]" />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at 30% 20%, rgba(120,119,198,0.05), transparent 50%)",
+        }}
+      />
 
       <div className="container relative">
         <motion.div
